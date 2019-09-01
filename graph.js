@@ -42,7 +42,7 @@ class Grafo {
   
 }
 
-function buscaBSF(pessoaBuscada, grafo) {
+function buscaDFS(pessoaBuscada, grafo) {
   var fila = []
   const começo = grafo.começo;
   começo.buscado = true;
@@ -113,7 +113,7 @@ n10.addVizinhos(n5, n16);
 
 
 caminho = '';
-arr = buscaBSF(n15,redeAmigos)
+arr = buscaDFS(n15, redeAmigos);
 for (let i = 0; i < arr.length; i++) {
   caminho += arr[i].valor;
   if (i+1 < arr.length){
@@ -121,4 +121,4 @@ for (let i = 0; i < arr.length; i++) {
   }
 }
 console.log("Caminho: " + caminho);
-// IMPLEMENTAÇÃO BSF
+
